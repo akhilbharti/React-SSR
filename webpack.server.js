@@ -1,9 +1,11 @@
 const path = require("path");
+const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
   //  building a bundle
   // for nodeJS, rather than for the browser
   target: "node",
+  externals: [nodeExternals()],
 
   //  root file of our
   // server application
